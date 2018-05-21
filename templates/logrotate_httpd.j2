@@ -1,0 +1,16 @@
+{{ logs_dir }}/*log {
+    {{ rotate_frequency }}
+    rotate {{ rotate_retention }}
+    missingok
+    notifempty
+    olddir {{ old_dir }}
+    dateext
+    dateformat -%Y%m%d
+    compress
+    compresscmd /bin/bzip2
+    compressext .bz2
+    sharedscripts
+    postrotate
+        /bin/systemctl reload httpd.service > /dev/null 2>/dev/null || true
+    endscript
+}

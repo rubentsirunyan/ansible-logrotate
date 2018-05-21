@@ -1,3 +1,5 @@
 ---
 logs_dir: /var/log/httpd
 old_dir: old
+rotate_frequency: daily
+rotate_retention: 45

@@ -10,3 +10,9 @@
     path: "{{ logs_dir }}/{{ old_dir }}"
     state: directory
   become: true
+
+- name: Deploy the configuration for apache
+  template:
+    src: logrotate_httpd.j2
+    dest: /etc/logrotate.d/httpd
+  become: true
