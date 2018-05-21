@@ -1,5 +1,17 @@
 ---
+# Directory where apache logs are stored
 logs_dir: /var/log/httpd
+
+# Directory where rotated, old logs should be stored
 old_dir: old
+
+# Frequency of the rotation
+# Options are:
+#   - daily
+#   - weekly
+#   - monthly
+#   - yearly
 rotate_frequency: daily
+
+# Number of files to keep before deleting old log files.
 rotate_retention: 45
