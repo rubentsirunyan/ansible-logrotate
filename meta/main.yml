@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: Ruben Tsirunyan
   description: An Ansible role for automating logrotate configuration for Apache HTTP server.
@@ -12,17 +13,17 @@ galaxy_info:
   github_branch: master
 
   platforms:
-  - name: Fedora
-    versions:
-      - 25
-  - name: Centos
-    versions:
-      - 7
-  - name: RHEL
-    versions:
-      - 7
+    - name: Fedora
+      versions:
+        - 25
+    - name: Centos
+      versions:
+        - 7
+    - name: RHEL
+      versions:
+        - 7
 
-  galaxy_tags: 
+  galaxy_tags:
     - logrotate
     - apache
     - logging
