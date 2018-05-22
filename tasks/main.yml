@@ -9,6 +9,7 @@
   file:
     path: "{{ logs_dir }}/{{ old_dir }}"
     state: directory
+  when: old_dir
   become: true
 
 - name: Deploy the configuration for apache

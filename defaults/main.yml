@@ -2,8 +2,11 @@
 # Directory where apache logs are stored
 logs_dir: /var/log/httpd
 
+# Set this to false if you do not need a separate directory for rotated logs
+old_dir: true
+
 # Directory where rotated, old logs should be stored (Relative to the value of logs_dir)
-old_dir: old
+old_dir_path: old
 
 # Frequency of the rotation
 # Options are:

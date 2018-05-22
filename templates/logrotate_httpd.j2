@@ -3,7 +3,9 @@
     rotate {{ rotate_retention }}
     missingok
     notifempty
-    olddir {{ old_dir }}
+    {% if old_dir %}
+    olddir {{ old_dir_path }}
+    {% endif %}
     dateext
     dateformat -%Y%m%d
     compress
