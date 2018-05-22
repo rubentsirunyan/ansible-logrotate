@@ -6,7 +6,11 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: instance
+  - name: centos_7_instance
+    image: centos:7
+  - name: fedora_instance
+    image: fedora:latest
+  - name: centos_6_instance
     image: centos:7
 provisioner:
   name: ansible
