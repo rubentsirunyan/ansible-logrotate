@@ -18,6 +18,7 @@ galaxy_info:
         - 25
     - name: Centos
       versions:
+        - 6
         - 7
     - name: RHEL
       versions:
