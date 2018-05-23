@@ -7,7 +7,7 @@
 
 - name: Ensure the directory for rotated log files exist
   file:
-    path: "{{ logs_dir }}/{{ old_dir }}"
+    path: "{{ logs_dir }}/{{ old_dir_path }}"
     state: directory
   when: old_dir
   become: true
