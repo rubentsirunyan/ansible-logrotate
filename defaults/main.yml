@@ -18,3 +18,11 @@ rotate_frequency: daily
 
 # Number of files to keep before deleting old log files.
 rotate_retention: 45
+
+# Cron schedule for logrotate. This is equivalent to '55 23 * * *' in crontab
+cron:
+  minutes: 55
+  hours: 23
+  days: '*'
+  months: '*'
+  weekday: '*'

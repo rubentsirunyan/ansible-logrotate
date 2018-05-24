@@ -17,3 +17,17 @@
     src: logrotate_httpd.j2
     dest: /etc/logrotate.d/httpd
   become: true
+
+- name: Configure the cron job
+  lineinfile:
+    path: /etc/crontab
+    regexp: '.* \/usr\/sbin\/logrotate -s \/var\/lib\/logrotate\/logrotate\.status \/etc\/logrotate\.conf'
+    line: "{{ cron.minutes }} {{ cron.hours }} {{ cron.days }} {{ cron.months }} {{ cron.weekday }} /usr/sbin/logrotate -s /var/lib/logrotate/logrotate.status /etc/logrotate.conf"
+    create: true
+  become: true
+
+- name: Ensure that default cron config is absent
+  file:
+    path: /etc/cron.daily/logrotate
+    state: absent
+  become: true
