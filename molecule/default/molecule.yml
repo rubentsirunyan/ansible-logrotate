@@ -11,7 +11,7 @@ platforms:
   - name: fedora_instance
     image: fedora:latest
   - name: centos_6_instance
-    image: centos:7
+    image: centos:6
 provisioner:
   name: ansible
   lint:
