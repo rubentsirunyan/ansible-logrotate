@@ -12,7 +12,8 @@
     compresscmd /bin/bzip2
     compressext .bz2
     sharedscripts
-    postrotate
-        /bin/systemctl reload httpd.service > /dev/null 2>/dev/null || true
-    endscript
+    copytruncate
+    #postrotate
+    #    /bin/systemctl reload httpd.service > /dev/null 2>/dev/null || true
+    #endscript
 }
